@@ -1,6 +1,12 @@
-# Training CamStyle with CycleGAN
+# Training CamStyle with CycleGAN for Person ReID in CORE-ReID and CORE-ReID V2
 
-CamStyle is trained with [CycleGAN-pytorch](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+More information:
+- [CORE-ReID](https://trinhquocnguyen.github.io/core-reid-homepage/): Comprehensive Optimization and Refinement through Ensemble fusion in Domain Adaptation for person re-identification ![new](https://img.alicdn.com/imgextra/i4/O1CN01kUiDtl1HVxN6G56vN_!!6000000000764-2-tps-43-19.png)
+
+- [CORE-ReID V2](https://trinhquocnguyen.github.io/core-reid-v2-homepage/): Advancing the Domain Adaptation for Object Re-Identification with Optimized Training and Ensemble Fusion ![new](https://img.alicdn.com/imgextra/i4/O1CN01kUiDtl1HVxN6G56vN_!!6000000000764-2-tps-43-19.png)
+
+
+
 
 
 ### Preparation
@@ -12,10 +18,9 @@ CamStyle is trained with [CycleGAN-pytorch](https://github.com/junyanz/pytorch-C
 2. Download dataset
    
    - Market-1501   [[BaiduYun]](https://pan.baidu.com/s/1ntIi2Op) [[GoogleDriver]](https://drive.google.com/file/d/0B8-rUzbwVRk0c054eEozWG9COHM/view)
-   
    - DukeMTMC-reID   [[BaiduYun]](https://pan.baidu.com/share/init?surl=kUD80xp) (password: chu1) [[GoogleDriver]](https://drive.google.com/file/d/0B0VOCNYh8HeRdnBPa2ZWaVBYSVk/view)
-   
-   - Move them to 'CamStyle/CycleGAN-for-CamStyle/datasets/market (or duke)'
+   - CUHK03NP (Chinese University of Hong Kong Re-identification) [[Baiduyun]](https://github.com/zhunzhong07/person-re-ranking/tree/master/CUHK03-NP) or [[Google Drive]](https://drive.google.com/file/d/1pBCIAGSZ81pgvqjC-lUHtl0OYV1icgkz/view)
+   - Move them to 'CamStyle/CycleGAN-for-CamStyle/datasets/market (or duke or cuhk03np)'
 
 # Train CamStyle models
 
@@ -24,6 +29,8 @@ CamStyle is trained with [CycleGAN-pytorch](https://github.com/junyanz/pytorch-C
   sh train_market.sh
   # For Duke
   sh train_duke.sh
+  # For CUHK03
+  sh train_cuhk03np.sh
   ```
 
 # Generate CamStyle images
@@ -33,10 +40,15 @@ CamStyle is trained with [CycleGAN-pytorch](https://github.com/junyanz/pytorch-C
   sh test_market.sh
   # For Duke
   sh test_duke.sh
+  # For CUHK03
+  sh train_cuhk03np.sh
   ```
 
-## Citation
-If you use this code for your research, please cite our papers.
+## Awareness
+Thanks for the authors of these paper.
+- Derived from: [Camera-Style](https://github.com/zhunzhong07/CamStyle)
+- CamStyle is trained with [CycleGAN-pytorch](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+
 ```
 
 @inproceedings{zhong2018camera,
