@@ -6,10 +6,7 @@ More information:
 - [CORE-ReID V2](https://trinhquocnguyen.github.io/core-reid-v2-homepage/): Advancing the Domain Adaptation for Object Re-Identification with Optimized Training and Ensemble Fusion ![new](https://img.alicdn.com/imgextra/i4/O1CN01kUiDtl1HVxN6G56vN_!!6000000000764-2-tps-43-19.png)
 
 
-
-
-
-### Preparation
+## 1. Preparation
 
 #### Requirements: Python=3.6 and Pytorch=0.4.0
 
@@ -22,27 +19,41 @@ More information:
    - CUHK03NP (Chinese University of Hong Kong Re-identification) [[Baiduyun]](https://github.com/zhunzhong07/person-re-ranking/tree/master/CUHK03-NP) or [[Google Drive]](https://drive.google.com/file/d/1pBCIAGSZ81pgvqjC-lUHtl0OYV1icgkz/view)
    - Move them to 'CamStyle/CycleGAN-for-CamStyle/datasets/market (or duke or cuhk03np)'
 
-# Train CamStyle models
+## 2. Train CamStyle models
 
   ```Shell
   # For Market-1501
   sh train_market.sh
   # For Duke
   sh train_duke.sh
-  # For CUHK03
+  # For CUHK03NP
   sh train_cuhk03np.sh
   ```
 
-# Generate CamStyle images
+## 3. Generate CamStyle images
 
   ```Shell
   # For Market-1501
   sh test_market.sh
   # For Duke
   sh test_duke.sh
-  # For CUHK03
-  sh train_cuhk03np.sh
+  # For CUHK03NP
+  sh test_cuhk03np.sh
   ```
+
+## 4. Citations
+Please cite our paper if you find it useful.
+```
+@article{,
+  author    = {Nguyen TQ, Prima ODA, Hotta K},
+  title     = {CORE-ReID: Comprehensive Optimization and Refinement through Ensemble Fusion in Domain Adaptation for Person Re-Identification.},
+  journal   = {Software},
+  doi       = {https://doi.org/10.3390/software3020012},
+  volume    = {3},
+  pages     = {227-249},
+  year      = {2024},
+}
+```
 
 ## Awareness
 Thanks for the authors of these paper.
@@ -66,3 +77,4 @@ Thanks for the authors of these paper.
 }
 
 ```
+
