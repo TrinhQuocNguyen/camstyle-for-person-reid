@@ -1,0 +1,2 @@
+# test all cameras for cuhk03np
+CUDA_VISIBLE_DEVICES=1,2 python test.py --dataroot /hdd4/data/reid/cuhk03np --name cuhk03np-c1-c2 --camA 1 --camB 2 --save_root results/cuhk03np/bounding_box_train_camstyle_test
